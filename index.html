@@ -9,6 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+    <script>
+  // force-correct IG handle after page load
+  window.addEventListener('load', () => {
+    const el = document.querySelector('a[href*="instagram.com"] span#ig-handle') 
+               || document.querySelector('a[href*="instagram.com"]');
+    if (el) {
+      // if you wrapped handle in span#ig-handle this will set it; otherwise set anchor text
+      const target = document.querySelector('#ig-handle') || el;
+      target.textContent = '@_sushant_247_';
+    }
+  });
+</script>
+
 <body>
     <div id="Jokes">
         <h1> Jokes</h1>
@@ -74,5 +87,6 @@
 </body>
 
 </html>
+
 
 
